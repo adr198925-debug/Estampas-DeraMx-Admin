@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.estampasderamxadmin">
+    package="com.example.estampasderamx">
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity
-            android:name=".SplashActivity"
+            android:name="com.example.estampasderamx.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,56 +19,56 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name="com.example.estampasderamx.MainActivity" android:exported="false" />
 
-        <activity android:name=".MenuActivity" android:exported="false" />
-        <activity android:name=".MenuDragonBallActivity" android:exported="false"  />
-        <activity android:name=".DragonBallSActivity" android:exported="false"  />
-        <activity android:name=".UltimateWarriorsActivity" android:exported="false"  />
-        <activity android:name=".LegendOfSonGokuActivity" android:exported="false"  />
-        <activity android:name=".UniversalCollectionTActivity" android:exported="false"  />
-        <activity android:name=".UniversalcollectionEActivity" android:exported="false"  />
-        <activity android:name=".TheUltimateActivity" android:exported="false"  />
-        <activity android:name=".MenuNarutoActivity"  android:exported="false"/>
-        <activity android:name=".UnnuevoinicioActivity" android:exported="false"  />
-        <activity android:name=".HokageActivity" android:exported="false"  />
-        <activity android:name=".NinjaAdventuresActivity" android:exported="false"  />
-        <activity android:name=".CaptainTsubasa" android:exported="false"  />
-        <activity android:name=".SpiderverseActivity" android:exported="false"  />
-        <activity android:name=".MarioBros" android:exported="false"  />
-        <activity android:name=".HarryPotter" android:exported="false"  />
-        <activity android:name=".CaballerosDelZodiaco" android:exported="false"  />
-        <activity android:name=".Yugioh" android:exported="false"  />
-        <activity android:name=".Resumen_DragonBallS_Activity" android:exported="false" />
-        <activity android:name=".Resumen_DragonBallW_Activity" android:exported="false" />
-        <activity android:name=".Resumen_DragonBall_SG_Activity" android:exported="false" />
-        <activity android:name=".Resumen_Dragon_Ball_UCT" android:exported="false" />
-        <activity android:name=".Resumen_Dragon_Ball_UCE" android:exported="false" />
-        <activity android:name=".Resumen_Dragon_Ball_Ultimate" android:exported="false" />
-        <activity android:name=".Resumen_Naruto_UnuevoInicio" android:exported="false" />
-        <activity android:name=".Resumen_Naruto_Hokage" android:exported="false"/>
-        <activity android:name=".Resumen_Naruto_Ninjadventures" android:exported="false"/>
-        <activity android:name=".Resumen_CaptainTsubasa" android:exported="false"/>
-        <activity android:name=".Resumen_Spiderverse" android:exported="false"/>
-        <activity android:name=".Resumen_MarioBros" android:exported="false"/>
-        <activity android:name=".Resumen_HarryPotter" android:exported="false"/>
-        <activity android:name=".Resumen_CaballerosDelZodiaco" android:exported="false"/>
-        <activity android:name=".Resumen_Yugioh" android:exported="false"/>
-        <activity android:name=".Inventario_estampas_s" android:exported="false"/>
-        <activity android:name=".inventario_estampa_w" android:exported="false"/>
-        <activity android:name=".Inventario_estampa_sgk" android:exported="false"/>
-        <activity android:name=".Inventario_estampa_uct" android:exported="false"/>
-        <activity android:name=".Inventario_estampa_uce" android:exported="false"/>
-        <activity android:name=".Inventario_estampa_ult" android:exported="false"/>
-        <activity android:name=".Inventario_estampa_uni" android:exported="false"/>
-        <activity android:name=".Inventario_estampa_ho" android:exported="false"/>
-        <activity android:name=".Inventario_estampa_na" android:exported="false"/>
-        <activity android:name=".Inventario_estampa_ct" android:exported="false"/>
-        <activity android:name=".Inventario_estampa_spv" android:exported="false"/>
-        <activity android:name=".Inventario_estampa_mb" android:exported="false"/>
-        <activity android:name=".Inventario_estampa_hp" android:exported="false"/>
-        <activity android:name=".Inventario_estampa_cbz" android:exported="false"/>
-        <activity android:name=".Inventario_estampa_yu" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.MenuActivity" android:exported="false" />
+        <activity android:name="com.example.estampasderamx.MenuDragonBallActivity" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.DragonBallSActivity" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.UltimateWarriorsActivity" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.LegendOfSonGokuActivity" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.UniversalCollectionTActivity" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.UniversalcollectionEActivity" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.TheUltimateActivity" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.MenuNarutoActivity"  android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.UnnuevoinicioActivity" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.HokageActivity" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.NinjaAdventuresActivity" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.CaptainTsubasa" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.SpiderverseActivity" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.MarioBros" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.HarryPotter" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.CaballerosDelZodiaco" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.Yugioh" android:exported="false"  />
+        <activity android:name="com.example.estampasderamx.Resumen_DragonBallS_Activity" android:exported="false" />
+        <activity android:name="com.example.estampasderamx.Resumen_DragonBallW_Activity" android:exported="false" />
+        <activity android:name="com.example.estampasderamx.Resumen_DragonBall_SG_Activity" android:exported="false" />
+        <activity android:name="com.example.estampasderamx.Resumen_Dragon_Ball_UCT" android:exported="false" />
+        <activity android:name="com.example.estampasderamx.Resumen_Dragon_Ball_UCE" android:exported="false" />
+        <activity android:name="com.example.estampasderamx.Resumen_Dragon_Ball_Ultimate" android:exported="false" />
+        <activity android:name="com.example.estampasderamx.Resumen_Naruto_UnuevoInicio" android:exported="false" />
+        <activity android:name="com.example.estampasderamx.Resumen_Naruto_Hokage" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Resumen_Naruto_Ninjadventures" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Resumen_CaptainTsubasa" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Resumen_Spiderverse" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Resumen_MarioBros" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Resumen_HarryPotter" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Resumen_CaballerosDelZodiaco" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Resumen_Yugioh" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Inventario_estampas_s" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.inventario_estampa_w" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Inventario_estampa_sgk" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Inventario_estampa_uct" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Inventario_estampa_uce" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Inventario_estampa_ult" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Inventario_estampa_uni" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Inventario_estampa_ho" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Inventario_estampa_na" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Inventario_estampa_ct" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Inventario_estampa_spv" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Inventario_estampa_mb" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Inventario_estampa_hp" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Inventario_estampa_cbz" android:exported="false"/>
+        <activity android:name="com.example.estampasderamx.Inventario_estampa_yu" android:exported="false"/>
 
     </application>
 

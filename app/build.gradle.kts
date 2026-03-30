@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.estampasderamxadmin"
+    namespace = "com.example.estampasderamx"
     compileSdk = 36
 
     defaultConfig {
