@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_menu"
+    android:fitsSystemWindows="true"
     tools:context=".MenuActivity">
 
+    <!-- CONTENIDO SCROLLEABLE -->
     <ScrollView
         android:id="@+id/scrollViewContent"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_container">
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,8 +38,10 @@
                 android:id="@+id/linearLayoutButtons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="-40dp">
+                android:layout_marginTop="-30dp"
+                android:orientation="vertical">
+
+                <!-- BOTONES -->
 
                 <Button
                     android:id="@+id/btn_DragonBall"
@@ -42,118 +49,97 @@
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="15dp"
+                    android:backgroundTint="#5D000000"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="30dp"
                     android:text="Dragon Ball"
                     android:textColor="#FFFFFF"
                     android:textSize="26sp"
-                    android:textStyle="bold|italic"
-                    android:gravity="center_vertical|start"
-                    android:paddingStart="30dp"
-                    android:backgroundTint="#5D000000"
-                    app:cornerRadius="15dp"
-                    app:strokeColor="#66FFFFFF"
-                    app:strokeWidth="1.5dp" />
+                    android:textStyle="bold|italic"/>
 
                 <Button
-                    android:id="@+id/btn_DBUW"
+                    android:id="@+id/btn_Naruto"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="13dp"
+                    android:backgroundTint="#4D000000"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="30dp"
                     android:text="Naruto"
                     android:textColor="#FFFFFF"
                     android:textSize="26sp"
-                    android:textStyle="bold|italic"
-                    android:gravity="center_vertical|start"
-                    android:paddingStart="30dp"
-                    android:backgroundTint="#4D000000"
-                    app:cornerRadius="15dp"
-                    app:strokeColor="#66FFFFFF"
-                    app:strokeWidth="1.5dp" />
+                    android:textStyle="bold|italic"/>
 
                 <Button
-                    android:id="@+id/btn_TLOSG"
+                    android:id="@+id/btn_CPTS"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="13dp"
+                    android:backgroundTint="#4D000000"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="30dp"
                     android:text="Captain Tsubasa"
                     android:textColor="#FFFFFF"
                     android:textSize="26sp"
-                    android:textStyle="bold|italic"
-                    android:gravity="center_vertical|start"
-                    android:paddingStart="30dp"
-                    android:backgroundTint="#4D000000"
-                    app:cornerRadius="15dp"
-                    app:strokeColor="#66FFFFFF"
-                    app:strokeWidth="1.5dp" />
+                    android:textStyle="bold|italic"/>
 
                 <Button
-                    android:id="@+id/btn_DBUCT"
+                    android:id="@+id/btn_SPV"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="13dp"
+                    android:backgroundTint="#4D000000"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="30dp"
                     android:text="Spiderverse"
                     android:textColor="#FFFFFF"
                     android:textSize="26sp"
-                    android:textStyle="bold|italic"
-                    android:gravity="center_vertical|start"
-                    android:paddingStart="30dp"
-                    android:backgroundTint="#4D000000"
-                    app:cornerRadius="15dp"
-                    app:strokeColor="#66FFFFFF"
-                    app:strokeWidth="1.5dp" />
+                    android:textStyle="bold|italic"/>
 
                 <Button
-                    android:id="@+id/btn_DBUCE"
+                    android:id="@+id/btn_MB"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="13dp"
+                    android:backgroundTint="#4D000000"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="30dp"
                     android:text="Mario Bros"
                     android:textColor="#FFFFFF"
                     android:textSize="26sp"
-                    android:textStyle="bold|italic"
-                    android:gravity="center_vertical|start"
-                    android:paddingStart="30dp"
-                    android:backgroundTint="#4D000000"
-                    app:cornerRadius="15dp"
-                    app:strokeColor="#66FFFFFF"
-                    app:strokeWidth="1.5dp" />
+                    android:textStyle="bold|italic"/>
 
                 <Button
-                    android:id="@+id/btn_DBU"
+                    android:id="@+id/btn_potter"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="13dp"
+                    android:backgroundTint="#4D000000"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="30dp"
                     android:text="Harry Potter"
                     android:textColor="#FFFFFF"
                     android:textSize="26sp"
-                    android:textStyle="bold|italic"
-                    android:gravity="center_vertical|start"
-                    android:paddingStart="30dp"
-                    android:backgroundTint="#4D000000"
-                    app:cornerRadius="15dp"
-                    app:strokeColor="#66FFFFFF"
-                    app:strokeWidth="1.5dp" />
+                    android:textStyle="bold|italic"/>
 
                 <Button
-                    android:id="@+id/btn_CaballerosdelZodiaco"
+                    android:id="@+id/btn_CDZ"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="13dp"
-                    android:text="Caballeros del zodiaco"
-                    android:textColor="#FFFFFF"
-                    android:textSize="24sp"
-                    android:textStyle="bold|italic"
+                    android:backgroundTint="#4D000000"
                     android:gravity="center_vertical|start"
                     android:paddingStart="30dp"
-                    android:backgroundTint="#4D000000"
-                    app:cornerRadius="15dp"
-                    app:strokeColor="#66FFFFFF"
-                    app:strokeWidth="1.5dp" />
+                    android:text="Caballeros del zodiaco"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"/>
 
                 <Button
                     android:id="@+id/btn_Yugioh"
@@ -161,49 +147,51 @@
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="13dp"
+                    android:backgroundTint="#4D000000"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="30dp"
                     android:text="Yugioh"
                     android:textColor="#FFFFFF"
                     android:textSize="26sp"
-                    android:textStyle="bold|italic"
-                    android:gravity="center_vertical|start"
-                    android:paddingStart="30dp"
-                    android:backgroundTint="#4D000000"
-                    app:cornerRadius="15dp"
-                    app:strokeColor="#66FFFFFF"
-                    app:strokeWidth="1.5dp" />
+                    android:textStyle="bold|italic"/>
 
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
+    <!-- BARRA INFERIOR PEQUEÑA -->
     <LinearLayout
         android:id="@+id/bottom_navigation_container"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
         android:background="#CC000000"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:orientation="horizontal"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="145dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="50dp"
+
+            <Button
+                android:id="@+id/btnAgregar"
+                android:layout_width="145dp"
                 android:layout_height="50dp"
-                android:src="@android:drawable/ic_input_add"
-                app:tint="#FF8000" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableStart="@android:drawable/ic_input_add"
+                android:drawablePadding="8dp"
+                android:drawableTint="#FFA500"
                 android:text="Agregar"
-                android:textColor="#FF8000"
-                android:textSize="30sp"
+                android:textColor="#FFA500"
+                android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
 

@@ -1,0 +1,19 @@
+<!-- res/drawable/custom_progress_drawable.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo de la barra -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="20dp" />
+            <solid android:color="#E1BEE7" /> <!-- Morado claro (cambia por tu @color/purple_background) -->
+        </shape>
+    </item>
+    <!-- El progreso (Morado) -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="20dp" />
+                <solid android:color="#9C27B0" /> <!-- Morado fuerte (cambia por tu @color/purple_progress) -->
+            </shape>
+        </clip>
+    </item>
+</layer-list>

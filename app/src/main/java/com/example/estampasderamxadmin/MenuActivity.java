@@ -2,26 +2,43 @@ package com.example.estampasderamxadmin;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Dialog;
+import android.view.LayoutInflater;
+import android.view.View;
 
 public class MenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        // Referencia al botón
-        Button btnAbrirMenu = findViewById(R.id.btn_DragonBall);
+        configurarBoton(R.id.btn_DragonBall, MenuDragonBallActivity.class);
+        configurarBoton(R.id.btn_Naruto, MenuNarutoActivity.class);
+        configurarBoton(R.id.btn_CPTS, CaptainTsubasa.class);
+        configurarBoton(R.id.btn_SPV, SpiderverseActivity.class);
+        configurarBoton(R.id.btn_MB, MarioBros.class);
+        configurarBoton(R.id.btn_potter, HarryPotter.class);
+        configurarBoton(R.id.btn_CDZ, CaballerosDelZodiaco.class);
+        configurarBoton(R.id.btn_Yugioh, Yugioh.class);
 
-        btnAbrirMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this, MenuDragonBallActivity.class);
-                startActivity(intent);
-            }
+    }
+
+    private void configurarBoton(int idBoton, Class<?> activityDestino) {
+
+        Button boton = findViewById(idBoton);
+
+        boton.setOnClickListener(v -> {
+            Intent intent = new Intent(MenuActivity.this, activityDestino);
+            startActivity(intent);
         });
-    } // <--- ESTA LLAVE CIERRA EL ONCREATE
-} // <--- ESTA LLAVE CIERRA LA CLASE
+    }
+
+
+
+}

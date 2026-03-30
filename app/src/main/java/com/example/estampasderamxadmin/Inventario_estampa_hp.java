@@ -1,0 +1,131 @@
+package com.example.estampasderamxadmin;
+
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.widget.Button;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Inventario_estampa_hp extends AppCompatActivity {
+
+    private RecyclerView recyclerView;
+    private List<String> listaTotal = new ArrayList<>();
+    private List<String> disponibles = new ArrayList<>();
+    private AdapterEstampas adapter;
+
+    private DatabaseReference refE;
+    private DatabaseReference refT;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.inventario_estampa_hp);
+
+        recyclerView = findViewById(R.id.recyclerInventario);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        // Limpieza de seguridad al iniciar la pantalla
+        listaTotal.clear();
+        disponibles.clear();
+
+        adapter = new AdapterEstampas(listaTotal, disponibles, 15, "");
+        recyclerView.setAdapter(adapter);
+
+        refE = FirebaseDatabase.getInstance().getReference("Harry_Potter/estampas");
+        refT = FirebaseDatabase.getInstance().getReference("Harry_Potter/tarjetas");
+
+        cargarNodo(refE, "");
+        cargarNodo(refT, "T");
+
+        Button btnRegresar = findViewById(R.id.btnRegresar);
+        Button btnFinalizar = findViewById(R.id.btnFinalizar);
+
+        // Guardar al regresar para no perder datos al navegar hacia atrás
+        btnRegresar.setOnClickListener(v -> {
+            guardarLocalmente();
+            finish();
+        });
+
+        // Guardar al finalizar (sin System.exit para asegurar el commit)
+        btnFinalizar.setOnClickListener(v -> {
+            guardarLocalmente();
+            finishAffinity();
+        });
+    }
+
+    private void guardarLocalmente() {
+        // CORREGIDO: getSharedPreferences (sin el "Get" doble)
+        SharedPreferences pref = getSharedPreferences("Stock_HarryPotter", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+
+        Map<String, Integer> datos = adapter.getInventario();
+        if (datos != null) {
+            for (Map.Entry<String, Integer> entry : datos.entrySet()) {
+                editor.putInt("id_" + entry.getKey(), entry.getValue());
+            }
+            // commit() síncrono para asegurar la persistencia física
+            editor.commit();
+        }
+    }
+
+    private void cargarLocalmente() {
+        // CORREGIDO: getSharedPreferences (sin el "Get" doble)
+        SharedPreferences pref = getSharedPreferences("Stock_HarryPotter", MODE_PRIVATE);
+        Map<String, Integer> mapaActual = adapter.getInventario();
+
+        for (String n : listaTotal) {
+            // Priorizamos la cantidad guardada si es mayor a 0
+            int cantidadGuardada = pref.getInt("id_" + n, 0);
+            if (cantidadGuardada > 0) {
+                mapaActual.put(n, cantidadGuardada);
+            }
+        }
+        adapter.setInventario(mapaActual);
+    }
+
+    private void cargarNodo(DatabaseReference ref, String prefijo) {
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot child : snapshot.getChildren()) {
+                    String numero = prefijo + child.getKey();
+                    String estado = child.child("estado").getValue(String.class);
+
+                    if (numero != null && !listaTotal.contains(numero)) {
+                        listaTotal.add(numero);
+                        if ("D".equals(estado)) {
+                            disponibles.add(numero);
+                        }
+                    }
+                }
+                // Sincronizar con el almacenamiento local
+                cargarLocalmente();
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {}
+        });
+    }
+
+    // Blindaje para el botón físico de atrás del celular
+    @Override
+    public void onBackPressed() {
+        guardarLocalmente();
+        super.onBackPressed();
+    }
+}

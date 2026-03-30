@@ -1,14 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.Theme.EstampasDeraMxAdmin" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.EstampasDeraMxAdmin"
+        parent="Theme.Material3.DayNight.NoActionBar">
 
-        <item name="android:windowSplashScreenBackground" tools:targetApi="s">@android:color/transparent</item>
-
-        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@android:color/transparent</item>
+        <item name="android:windowSplashScreenBackground"
+            tools:targetApi="s">@drawable/fondo_goku</item>
 
         <item name="android:windowContentOverlay">@null</item>
 
-        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+    <style name="RoundedImageView">
+        <item name="cornerSize">15dp</item>
     </style>
 
-    <style name="Theme.EstampasDeraMxAdmin" parent="Base.Theme.EstampasDeraMxAdmin" />
+    <style name="Theme.EstampasDeraMxAdmin"
+        parent="Base.Theme.EstampasDeraMxAdmin" />
 </resources>

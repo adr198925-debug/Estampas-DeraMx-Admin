@@ -7,7 +7,10 @@ import android.os.Looper;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.bumptech.glide.Glide;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -22,12 +25,16 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        // Vincular componentes
         barra = findViewById(R.id.loadingCircle);
         texto = findViewById(R.id.textoPorcentaje);
         imgFondo = findViewById(R.id.imgGokuGif);
 
-        // Lógica de simulación de carga (0 a 100)
+        // 🔥 AQUÍ ESTABA EL ERROR
+        Glide.with(this)
+                .asGif()
+                .load(R.drawable.fondo_goku) // tu gif
+                .into(imgFondo);
+
         iniciarCarga();
     }
 
@@ -40,17 +47,20 @@ public class SplashActivity extends AppCompatActivity {
                         texto.setText(progreso + "%");
                     }
                 });
+
                 try {
-                    Thread.sleep(40); // Velocidad de la carga (4 segundos total aprox)
+                    Thread.sleep(40);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
 
-            // Al terminar, saltar al menú (Asegúrate de tener un MenuActivity o cámbialo)
-            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-            startActivity(intent);
-            finish();
+            handler.post(() -> {
+                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            });
+
         }).start();
     }
 }

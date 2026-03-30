@@ -14,7 +14,7 @@
         android:layout_height="0dp"
         android:fillViewport="true"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_container">
+        app:layout_constraintBottom_toTopOf="@id/barraInferior">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,84 +42,69 @@
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="15dp"
-                    android:backgroundTint="#5D000000"
+                    android:background="@drawable/bg_menu_neon"
                     android:gravity="center_vertical|start"
                     android:paddingStart="30dp"
-                    android:text="Dragon Ball S"
-                    android:textColor="#FFFFFF"
-                    android:textSize="26sp"
-                    android:textStyle="bold|italic"
-                    app:cornerRadius="15dp"
-                    app:strokeColor="#66FFFFFF"
-                    app:strokeWidth="1.5dp" />
+                    android:text="DRAGON BALL S"
+                    android:textColor="#00E5FF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/btn_DBUW"
+                    android:id="@+id/btn_DBN"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="70dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="13dp"
-                    android:backgroundTint="#4D000000"
+                    android:background="@drawable/bg_menu_neon"
                     android:gravity="center_vertical|start"
                     android:paddingStart="30dp"
-                    android:text="DBS:ultimate warrios"
-                    android:textColor="#FFFFFF"
-                    android:textSize="26sp"
-                    android:textStyle="bold|italic"
-                    app:cornerRadius="14dp"
-                    app:strokeColor="#66FFFFFF"
-                    app:strokeWidth="1.5dp" />
+                    android:text="DRAGON BALL S ULTIMATE WARRIORS"
+                    android:textColor="#00E5FF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btn_TLOSG"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="70dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="13dp"
-                    android:backgroundTint="#4D000000"
+                    android:background="@drawable/bg_menu_neon"
                     android:gravity="center_vertical|start"
                     android:paddingStart="30dp"
-                    android:text="DBs: The legend of Son Goku"
-                    android:textColor="#FFFFFF"
-                    android:textSize="26sp"
-                    android:textStyle="bold|italic"
-                    app:cornerRadius="15dp"
-                    app:strokeColor="#66FFFFFF"
-                    app:strokeWidth="1.5dp" />
+                    android:text="DRAGON BALL S THE LEGEND OF SON GOKU"
+                    android:textColor="#00E5FF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btn_DBUCT"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="70dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="13dp"
-                    android:backgroundTint="#4D000000"
+                    android:background="@drawable/bg_menu_neon"
                     android:gravity="center_vertical|start"
                     android:paddingStart="30dp"
-                    android:text="DB: Universal Collection Tarjetas"
-                    android:textColor="#FFFFFF"
-                    android:textSize="26sp"
-                    android:textStyle="bold|italic"
-                    app:cornerRadius="15dp"
-                    app:strokeColor="#66FFFFFF"
-                    app:strokeWidth="1.5dp" />
+                    android:text="DRAGON BALL UNIVERSAL COLLECTION TARJETAS"
+                    android:textColor="#00E5FF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btn_DBUCE"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="70dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="13dp"
-                    android:backgroundTint="#4D000000"
+                    android:background="@drawable/bg_menu_neon"
                     android:gravity="center_vertical|start"
                     android:paddingStart="30dp"
-                    android:text="DB: Uinversal Collection Estampas"
-                    android:textColor="#FFFFFF"
-                    android:textSize="26sp"
-                    android:textStyle="bold|italic"
-                    app:cornerRadius="15dp"
-                    app:strokeColor="#66FFFFFF"
-                    app:strokeWidth="1.5dp" />
+                    android:text="DRAGON BALL UNIVERSAL ESTAMPAS"
+                    android:textColor="#00E5FF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btn_DBU"
@@ -127,53 +112,41 @@
                     android:layout_height="70dp"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="13dp"
-                    android:backgroundTint="#4D000000"
+                    android:background="@drawable/bg_menu_neon"
                     android:gravity="center_vertical|start"
                     android:paddingStart="30dp"
-                    android:text="DB:Ultimate"
-                    android:textColor="#FFFFFF"
-                    android:textSize="26sp"
-                    android:textStyle="bold|italic"
-                    app:cornerRadius="15dp"
-                    app:strokeColor="#66FFFFFF"
-                    app:strokeWidth="1.5dp" />
-
-
+                    android:text="DRAGON BALL ULTIMATE"
+                    android:textColor="#00E5FF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
     <LinearLayout
-        android:id="@+id/bottom_navigation_container"
+        android:id="@+id/barraInferior"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#CC000000"
+        android:orientation="horizontal"
+        android:background="#CC1E1E1E"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:paddingBottom="45dp"
+        android:paddingTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@android:drawable/ic_input_add"
-                app:tint="#FF8000" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Agregar"
-                android:textColor="#FF8000"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/btnRegresar"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:text="Regresar"
+            android:textColor="#00E5FF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            android:textAllCaps="true" />
 
     </LinearLayout>
 

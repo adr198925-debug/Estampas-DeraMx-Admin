@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "480801084842",
+    "firebase_url": "https://estampas-deramx-oficial-default-rtdb.firebaseio.com",
     "project_id": "estampas-deramx-oficial",
     "storage_bucket": "estampas-deramx-oficial.firebasestorage.app"
   },
@@ -10,6 +11,25 @@
         "mobilesdk_app_id": "1:480801084842:android:1ba487fd5551017c8447d3",
         "android_client_info": {
           "package_name": "com.example.estampasderamxadmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6s0pE12eAB-dzEsNcOC8dqAi_0pWUPxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480801084842:android:b882a30e374b01858447d3",
+        "android_client_info": {
+          "package_name": "com.example.estampasderamxuser"
         }
       },
       "oauth_client": [],
